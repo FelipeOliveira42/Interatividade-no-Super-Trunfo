@@ -1,54 +1,71 @@
-🃏 Super Trunfo — Comparação de Cartas
-📘 Descrição
+Super Trunfo - Comparador de Cartas em C
+📌 Descrição do Projeto
 
-Este projeto é uma continuação do desafio anterior de cadastro de cartas do jogo Super Trunfo.
-Agora, o programa permite comparar duas cartas de países com base em diferentes atributos, escolhidos pelo usuário por meio de um menu interativo implementado com switch e estruturas condicionais if-else.
+Este projeto é uma implementação em C do clássico jogo Super Trunfo, com foco em comparação de atributos entre cartas. Cada carta representa um país e possui diversos atributos, como população, área, PIB, pontos turísticos e densidade demográfica.
 
-O jogo exibe o resultado da comparação, indicando qual país venceu em cada atributo ou se houve empate.
+O projeto permite que o usuário escolha um ou dois atributos para comparar as cartas, usando menus interativos, switch e if-else aninhados. O sistema calcula os resultados com base em regras específicas e trata empates de forma clara.
 
-🧱 Funcionalidades
+Este projeto é ideal para estudantes que querem praticar:
 
-Exibe um menu interativo no terminal.
+Estruturas de controle (if, switch)
 
-Permite ao jogador escolher qual atributo deseja comparar entre duas cartas.
+Operações aritméticas e cálculos derivados
 
-Implementa regras específicas:
+Entrada e saída de dados em C
 
-Atributos numéricos → vence o maior valor.
+Menus interativos e lógica de jogos
 
-Densidade demográfica → vence o menor valor.
+⚙️ Funcionalidades
 
-Mostra o resultado detalhado:
+Cadastro pré-definido de duas cartas (países) com atributos:
 
-Nome dos países.
+Nome do país
 
-Valores dos atributos.
+População
 
-Qual carta venceu ou se houve empate.
+Área (km²)
 
-⚙️ Atributos disponíveis para comparação
-Opção	Atributo	Tipo	Regra de vitória
-1	População	int	Vence o país com maior população
-2	Área	float	Vence o país com maior área
-3	PIB	float	Vence o país com maior PIB
-4	Pontos turísticos	int	Vence o país com mais pontos turísticos
-5	Densidade demográfica	float	Vence o país com menor densidade (regra invertida)
-💻 Como compilar e executar
-🧩 Pré-requisitos
+PIB (bilhões)
 
-Ter um compilador C instalado, como o GCC.
+Número de pontos turísticos
 
-(Opcional) Um ambiente de desenvolvimento como Code::Blocks, VS Code, ou o terminal do seu sistema operacional.
+Densidade demográfica (calculada automaticamente)
 
-🛠️ Compilação via terminal
+Menus interativos para escolha de um ou dois atributos para comparação.
 
-Salve o arquivo com o nome super_trunfo.c
+Comparação de atributos seguindo regras:
 
-Abra o terminal na pasta onde o arquivo foi salvo.
+Maior valor vence, exceto densidade demográfica (menor vence)
+
+Soma dos atributos quando dois são escolhidos, determinando o vencedor final.
+
+Tratamento de empates.
+
+Mensagens e resultados exibidos de forma clara e organizada.
+
+🛠️ Tecnologias Utilizadas
+
+Linguagem de Programação: C
+
+Compilador sugerido: GCC ou qualquer compilador compatível com C99
+
+Ambiente de execução: Terminal ou console
+
+🎮 Como Executar
+
+Clone o repositório:
+
+git clone https://github.com/SEU_USUARIO/super-trunfo-c.git
+
+
+Navegue até o diretório do projeto:
+
+cd super-trunfo-c
+
 
 Compile o programa:
 
-gcc super_trunfo.c -o super_trunfo
+gcc -o super_trunfo super_trunfo.c
 
 
 Execute o programa:
@@ -56,47 +73,55 @@ Execute o programa:
 ./super_trunfo
 
 
-No Windows (Prompt de Comando):
+Siga as instruções no terminal para escolher os atributos e visualizar o resultado da comparação.
 
-super_trunfo.exe
+📚 Estrutura do Projeto
+super-trunfo-c/
+│
+├─ super_trunfo.c      # Código-fonte principal em C
+├─ README.md           # Este arquivo
+└─ LICENSE             # (Opcional) Licença do projeto
 
-🎮 Exemplo de uso
-
-Saída esperada no terminal:
-
-=== SUPER TRUNFO: Comparacao de Cartas ===
-
+💡 Exemplo de Uso
+===== SUPER TRUNFO - COMPARACAO AVANCADA =====
 Carta 1: Brasil
-Carta 2: Argentina
+Carta 2: Japão
 
-Escolha o atributo para comparacao:
+Escolha o PRIMEIRO atributo para comparacao:
 1 - Populacao
 2 - Area
 3 - PIB
-4 - Numero de pontos turisticos
-5 - Densidade demografica
+4 - Numero de Pontos Turisticos
+5 - Densidade Demografica
+Digite sua opcao: 5
 
-Digite a opcao desejada: 3
+Escolha o SEGUNDO atributo (diferente do primeiro):
+1 - Populacao
+2 - Area
+3 - PIB
+4 - Numero de Pontos Turisticos
+Digite sua opcao: 3
 
-=== Resultado da Comparacao ===
-Atributo escolhido: PIB
-Brasil: 22000.00 bilhoes de reais
-Argentina: 6300.00 bilhoes de reais
-Vencedor: Brasil (maior PIB)
+===== RESULTADOS DAS COMPARACOES =====
+1º Atributo: Densidade Demografica
+Brasil: 25.13 hab/km²
+Japão: 332.91 hab/km²
 
-📄 Estrutura do projeto
-super_trunfo/
-├── super_trunfo.c   # Código-fonte principal do programa
-├── README.md        # Este arquivo com instruções e descrição
+2º Atributo: PIB
+Brasil: 2300.00 bilhoes
+Japão: 5050.00 bilhoes
 
-🧠 Conceitos utilizados
+===== SOMA DOS ATRIBUTOS =====
+Brasil: 2325.13
+Japão: 5382.91
 
-Estrutura de controle switch
+===== RESULTADO FINAL =====
+Vencedor: Japão 🏆
 
-Estruturas condicionais if-else
+📝 Observações
 
-Variáveis e tipos de dados (int, float, char[])
+O projeto utiliza valores pré-definidos para as cartas, mas pode ser adaptado para permitir cadastro dinâmico pelo usuário.
 
-Cálculo de densidade demográfica (população ÷ área)
+Menus interativos garantem que o mesmo atributo não possa ser selecionado duas vezes.
 
-Entrada e saída de dados no terminal (scanf e printf)
+Fácil de estender: adicionar mais cartas, atributos ou funcionalidades é simples.
