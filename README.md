@@ -59,3 +59,44 @@ Execute o programa:
 No Windows (Prompt de Comando):
 
 super_trunfo.exe
+
+🎮 Exemplo de uso
+
+Saída esperada no terminal:
+
+=== SUPER TRUNFO: Comparacao de Cartas ===
+
+Carta 1: Brasil
+Carta 2: Argentina
+
+Escolha o atributo para comparacao:
+1 - Populacao
+2 - Area
+3 - PIB
+4 - Numero de pontos turisticos
+5 - Densidade demografica
+
+Digite a opcao desejada: 3
+
+=== Resultado da Comparacao ===
+Atributo escolhido: PIB
+Brasil: 22000.00 bilhoes de reais
+Argentina: 6300.00 bilhoes de reais
+Vencedor: Brasil (maior PIB)
+
+📄 Estrutura do projeto
+super_trunfo/
+├── super_trunfo.c   # Código-fonte principal do programa
+├── README.md        # Este arquivo com instruções e descrição
+
+🧠 Conceitos utilizados
+
+Estrutura de controle switch
+
+Estruturas condicionais if-else
+
+Variáveis e tipos de dados (int, float, char[])
+
+Cálculo de densidade demográfica (população ÷ área)
+
+Entrada e saída de dados no terminal (scanf e printf)
